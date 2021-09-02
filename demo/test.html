@@ -1,0 +1,14 @@
+<script>
+
+function code(id,name)  
+      {  
+              this.id= id;  
+              this.name= name;  
+      }  
+     function  pcode(id,name)  
+      {  
+            code.call(this,id,name);  
+      }  
+      document.writeln(new pcode(004,"James Deo").name);  
+
+</script>

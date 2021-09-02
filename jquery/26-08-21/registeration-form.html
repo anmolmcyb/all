@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+$(document).ready(function(){
+let data = $('#data')
+
+$('form').submit(function(e){
+    e.preventDefault()
+    console.log(e.data)
+    console.log(e)
+    let d = $(this).serializeArray().reduce((i,j)=>`${i}
+    ${JSON.stringify(j)} \n`)
+    console.log(d)
+    data.text(d)
+})
+})
+    </script>
+</head>
+<body>
+    <h1>Registeration form</h1>
+    <br>
+    <br>
+    <br>
+    <form>
+        Name: <input type="text" name="name">
+    <br>
+    <br>
+    <br>
+        
+        Email: <input type="email" name="email" id="email">
+    <br>
+    <br>
+    <br>
+        
+        Employee id: <input type="text" name="empid">
+    <br>
+    <br>
+    <br>
+<input type="submit" value="submit">
+
+    </form>
+    <br>
+    <br>
+    <br>
+<h1>Data</h1>
+<div id="data"></div>
+</body>
+</html>

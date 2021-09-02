@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <title>
+            Assignment #3
+        </title>
+        <script src="../js/dragdrop.js"></script>
+    </head>
+    <body>
+        <p>Blue</p>
+        <div id="drop" ondragover="allowDrop(event)" ondrop="drop(event)"
+    style="width: 100px; height: 100px; padding: 1px; border: 1px solid;"
+    ></div>
+    <p>Yellow</p>
+    <div id="drop" ondragover="allowDrop(event)" ondrop="drop(event)"
+    style="width: 100px; height: 100px; padding: 1px; border: 1px solid;"
+    ></div>
+    <img id="blue" src="../resources/blue.png" draggable="true" ondragstart="drag(event)"
+    style="width: 100px; height: 100px;">
+    <img id="yellow" src="../resources/yellow.png" draggable="true" ondragstart="drag(event)"
+    style="width: 100px; height: 100px;">
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#ret").click(function () {
+                console.log('executing...')
+                var disp = $("#disp")
+                disp.text('loading data form JSON source...')
+                $.ajax({
+                    type: "get",
+                    url: 'products.json',
+                    success(result) {
+                        console.log(result)
+                        var op = "<table><thead><tr><th>Name</th><th>Cost</th><th>ID</th></tr></thead><tbody>"
+                        for (var i in result) (
+                            op += "<tr><td>" + result[i].name + "</td><td>" + result[i].cost + "</td><td>" + result[i].id + "</td></tr>"
+
+                        )
+                        op += "</tbody></table>"
+                        disp.html(op)
+                        $("table").addClass("table")
+                    }
+                })
+            })
+        })
+
+    </script>
+</head>
+
+<body>
+<input type="button" value="retrive" id="ret">
+<div id="disp"></div>
+</body>
+
+</html>

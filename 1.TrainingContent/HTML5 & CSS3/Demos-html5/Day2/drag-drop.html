@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>        
+        function allowDrop(ev)
+         { 
+             ev.preventDefault();//preventing default function 
+            }
+        
+        function drag(ev) { 
+            ev.dataTransfer.setData("text", ev.target.id); 
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            alert(data);
+            alert(ev.target.id);
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>    
+<div id="div1" style="width:350px;height:100px;padding:10px;border:1px solid #aaaaaa;"
+        ondragover="allowDrop(event)"         ondrop="drop(event)">
+    </div>
+    <br>
+    <button id="drag1" draggable="true" ondragstart="drag(event)">Drag</button>
+</body>
+</html>

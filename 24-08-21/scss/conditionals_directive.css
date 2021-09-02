@@ -1,0 +1,28 @@
+#danger {
+  color: red;
+  border: 1px solid #830202;
+}
+
+#success {
+  color: green;
+  border: 1px solid #004600;
+}
+
+#important {
+  color: blue;
+  border: 1px solid #030381;
+}
+
+#warning {
+  color: yellow;
+  border: 1px solid #757500;
+}
+
+ul li {
+  background-color: blue;
+}
+
+ul li:hover {
+  background-color: red;
+}
+/*# sourceMappingURL=conditionals_directive.css.map */

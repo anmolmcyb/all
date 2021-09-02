@@ -1,0 +1,39 @@
+.blue, .pink, .orange {  
+	position: absolute;
+	}
+.pink {
+  top: 40px;
+  left: 40px;
+  background: rgb(239, 71, 111);
+}
+
+.blue {
+  top: 100px;
+  left: 80px;
+  background: rgb(17, 138, 178);
+    z-index:-1;
+}
+
+.green {    
+  background: rgb(6, 214, 160);
+}
+
+.orange {
+  height: 100px;
+  width: 100px;
+  background: rgb(255, 209, 102);
+  font-size: 14px;
+    z-index:3;
+}
+
+div {
+  height: 150px;
+  width: 150px;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  text-align: right;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.purple {  z-index: 0;}

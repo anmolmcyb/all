@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Assignment# 1
+        </title>
+        <link rel="stylesheet" href="../css/style.css"/>
+    </head>
+    <body>
+        <div id="main">
+            <h2>Registeration form</h2>
+            <form>
+                <h3>User Details</h3>
+                Name: <input type="text" id="name" required><br/>
+                Phone Number: <input type="tel" name="phno" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br/>
+                e-mail: <input type="email" name="email" id="email" required><br/>
+                Address Line 1: <input type="text" name="al1" id="al1" required><br/>
+                Address Line 2: <input type="text" name="al2" id="al2" required><br/>
+                Address Line 3: <input type="text" name="al3" id="al3" required><br/>
+                <br/>
+                <h3>Payment Details</h3>
+                <br/>
+                Name on card: <input type="text" name="cname" id="cname"><br/>
+                Card Number: <input type="number" name="cn1" id="cn1" min="1000" max="9999">
+                <input type="number" name="cn2" id="cn2" min="1000" max="9999">
+                <input type="number" name="cn3" id="cn3" min="1000" max="9999">
+                <input type="number" name="cn4" id="cn4" min="1000" max="9999">
+                <br/>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>

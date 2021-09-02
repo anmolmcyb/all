@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('p').click(
+                function () {
+                    $(this).hide()
+                }
+            )
+        })
+        $(document).ready(function () {
+            // console.log($('div'))
+            $('div:contains(welcome)').css('background-color', 'red')
+            $('a[target="_blank"]').css('background-color', 'green')
+            $('ul li:first-child').css('background-color', 'blue')
+
+        })
+        $(document).ready(function () {
+            $('div').find('span').css('color', 'yellow')
+            $('div').children('span').css('color', 'red')
+            $('div').children().css('background-color', 'blue')
+            $('div').after('<p>div.after<p>')
+            $('div').append('<p>div.append<p>')
+            $('div').before('<p>div.before<p>')
+            $('div').prepend('<p>div.prepend<p>')
+        })
+    </script>
+</head>
+
+<body>
+    <p>click me</p>
+    <p>click me</p>
+    <p>click me</p>
+    <p>click me</p>
+    <p>click me</p>
+    <br>
+    <br>
+    <br>
+    <div>
+        welcome
+    </div>
+    <br>
+    <br>
+    <br>
+    <div>
+        hello there
+        <span>hello 1</span>
+        <span>hello 2</span>
+        <section>
+            <span>hello 3</span>
+        </section>
+    </div>
+    <br>
+    <br>
+    <br>
+    <a href="#" target="_blank"> blank targets</a>
+    <br>
+    <br>
+    <br>
+    <ul>
+        <li>first</li>
+        <li>second</li>
+        <li>third</li>
+    </ul>
+</body>
+
+</html>

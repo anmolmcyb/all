@@ -1,0 +1,37 @@
+@mixin theme($bgcolor: rgb(130, 130, 255), $btncolor: blue) {
+    background-color: $bgcolor;
+    align-items: center;
+    .container {
+        min-width: 900px;
+        .left {
+            float: left;
+            min-height: 1000px;
+            min-width: 590px;
+        }
+        .right{
+            min-height: 1000px;
+
+            float: left;
+            min-width: 290px;
+    justify-items: center;            
+            .button {
+                background-color: $btncolor;
+                color: white;
+                min-width: 80px;
+                min-height: 30px;
+                border: 1px solid rgb(0, 0, 129);
+                border-radius: 5px;
+                justify-self: center ;
+            }
+        }
+    }
+}
+
+.theme-1 {
+    @include theme;  
+}
+.theme-2 {
+    @include theme(rgb(152, 248, 152), green);
+}
+
+

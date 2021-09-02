@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management System UI</title>
+    <style>
+        #wrapper {
+            min-width: 512px;
+            max-width: 1024px;
+            margin: 0 auto;
+            border: 1px solid pink;
+            background-color: azure;
+        }
+
+        #header {
+            border: 10px;
+            text-align: left;
+
+            background-color: purple;
+
+            height: 50px;
+
+            vertical-align: middle;
+        }
+
+        #header>h1 {
+            padding: 10px;
+        }
+
+        #left {
+            width: 20%;
+            float: left;
+            margin: 0 15px;
+            min-height: 500px;
+            text-align: center;
+        }
+
+        #mid {
+            float: left;
+            width: 55%;
+            text-align: center;
+            background: #efefef;
+            min-height: 500px;
+        }
+
+        #right {
+            float: right;
+            width: 20%;
+            text-align: center;
+            min-height: 500px;
+        }
+
+        article section ul {
+            text-align: center;
+        }
+
+        article section ul li {
+            display: inline-block;
+            background: blue;
+            width: 95%;
+        }
+
+        article section ul li a {
+            display: block;
+            float: left;
+            padding: 3px 6px;
+            color: white;
+            font-size: 22px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        article section ul li a p {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        nav.navigation {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        nav.navigation ul {
+            list-style: none;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        nav.navigation ul li {
+            background: linear-gradient(violet, red);
+            display: inline-block;
+        }
+
+        nav.navigation ul li a {
+            display: block;
+            float: left;
+            padding: 3px 6px;
+            color: #575c7d;
+            font-size: 22px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav.navigation ul li a:hover {
+            background: #ccc;
+            color: #fff;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            padding: 3px 6px;
+            margin: 0;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="wrappper">
+        <header id="header">
+            <h1>
+                Book Management System
+            </h1>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="./page.html">Show all</a></li>
+                    <li><a href="./add.html">Add Book</a></li>
+                    <li><a href="./remove.html">Remove Book</a></li>
+                    <li><a href="./edit.html">Edit Book</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <article>
+        <section id="left">
+            <ul id="titles">
+
+
+            </ul>
+        </section>
+        <section id="mid">
+            <section id="details">
+
+                <h3 id="title2"></h3>
+                <br>
+                <div>
+                    <p id="para"></p>
+                </div>
+            </section>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+        </section>
+        <section id="right">
+            <ul>
+                <li>
+                    <a>
+                        <!-- <h4>Author: </h4> -->
+                        <h5 id="author"></h5>
+                    </a>
+                </li>
+
+                <br />
+                <li>
+                    <a>
+                        <!-- <h4>Other details: </h4> -->
+                        <h5 id="other_details"></h5>
+                    </a>
+                </li><br />
+                <li>
+                    <a>
+                        <!-- <h4>Cost: </h4> -->
+                        <h5 id="cost"></h5>
+                    </a>
+                </li><br />
+            </ul>
+        </section>
+    </article>
+    <script src="../js/script.js"></script>
+    <script>
+        //for page.html
+        let titles = document.getElementById('titles')//side link
+        let title2 = document.getElementById('title2')//main title
+        let para = document.getElementById('para')//para for main content - details
+        let books = getAllBooks()
+        let author = document.getElementById('author')
+        let other_details = document.getElementById('other_details')
+        let cost = document.getElementById('cost')
+
+
+
+        /**
+         * 
+         * @param {Array.<Book>} books 
+         */
+        function genetrateTitlesList(books) {
+            for (let b of books) {
+                let a = document.createElement('a')
+                a.innerText = b.name
+                let li = document.createElement('li')
+                li.setAttribute('id', b.id)
+                li.appendChild(a)
+                li.addEventListener('click', function () {
+                    //display b on page
+                    title2.innerText = b.name
+                    para.innerText = b.description
+                    other_details.innerText = `Other details: ${b.other}`
+                    author.innerText = `Author: ${b.author}`
+                    cost.innerText = `Cost: ${b.cost}`
+                })
+                titles.append(li)
+
+            }
+        }
+        genetrateTitlesList(getAllBooks())
+    </script>
+
+</body>
+
+</html>

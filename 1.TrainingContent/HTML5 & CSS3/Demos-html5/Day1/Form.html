@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 5 form</title>
+</head>
+
+<body>
+    <fieldset style="width: 30%;">
+        <legend>HTML5 Form</legend>
+        <pre>
+                <form>
+            Name:       <input type="text" name="name" placeholder="enter your name">
+            <br>
+            Email:      <input type="email" name="email" placeholder="enter email">
+            <br>
+            Gender:     <input type="radio" name="gender" value="male" checked> Male: <input type="radio" name="gender" value="female"> Female
+            <br>
+            Password:   <input type="password" name="password" placeholder="enter password">
+            <br>
+            Salary:     <input type="number" name="salary" placeholder="enter salary">
+            <br>
+            Range:      <input type="range" name="price-range" min=0 max=100 >
+            <br>
+            Address:    <textarea rows="4" cols="25"></textarea>
+            <br>
+            URL:        <input type="url" name="home-url">
+            <br>
+            DOB:        <input type="date" name="dob">
+            <br>
+            Birthtime:  <input type="time" name="birth-time">
+            <br>
+            Mobile:     <input type="tel" name="phone">
+            <br>
+            City :      <select name="city">
+                    <option>Select</option>
+                <option value="pune">Pune</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="hyderabad">Hyderabad</option>
+                <option value="chennai">Chennai</option>
+            </select>
+            <br>
+            Skills:      <select name="skills" multiple>
+                <option value="java">Java</option>
+                <option value="hibernate">Hibernate</option>
+                <option value="spring">Spring</option>
+                <option value="javascript">Javascript</option>
+            </select>
+            <br>
+            Swimming:   <input type="checkbox" name="hobby" value="Swimming" checked> Cycling: <input type="checkbox" name="hobby" value="Cycling">
+            Running:    <input type="checkbox" name="hobby" value="Running">  Cricket: <input type="checkbox" name="hobby" value="Cricket">
+            <br>
+            Upload resume:  <input type="file" name="resume">
+            <br>
+            <input type="submit" value="Submit form">   <input type="reset" value="Reset form">
+        </form>
+    </pre>
+</fieldset>
+</body>
+
+</html>

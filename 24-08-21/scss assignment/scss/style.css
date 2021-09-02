@@ -1,0 +1,70 @@
+.theme-1 {
+  background-color: #8282ff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.theme-1 .container {
+  min-width: 900px;
+}
+
+.theme-1 .container .left {
+  float: left;
+  min-height: 1000px;
+  min-width: 590px;
+}
+
+.theme-1 .container .right {
+  min-height: 1000px;
+  float: left;
+  min-width: 290px;
+  justify-items: center;
+}
+
+.theme-1 .container .right .button {
+  background-color: blue;
+  color: white;
+  min-width: 80px;
+  min-height: 30px;
+  border: 1px solid #000081;
+  border-radius: 5px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.theme-2 {
+  background-color: #98f898;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.theme-2 .container {
+  min-width: 900px;
+}
+
+.theme-2 .container .left {
+  float: left;
+  min-height: 1000px;
+  min-width: 590px;
+}
+
+.theme-2 .container .right {
+  min-height: 1000px;
+  float: left;
+  min-width: 290px;
+  justify-items: center;
+}
+
+.theme-2 .container .right .button {
+  background-color: green;
+  color: white;
+  min-width: 80px;
+  min-height: 30px;
+  border: 1px solid #000081;
+  border-radius: 5px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+/*# sourceMappingURL=style.css.map */

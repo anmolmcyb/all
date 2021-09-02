@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Store</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            function showAll(arr){
+                arr.each(function () {
+                    $(this).show()
+                })
+            }
+            $("nav.navigation ul li a").click(function () {
+                var name = $(this).html().toLowerCase();
+                console.log('clicked on', name)
+                var arr = $('.cakes, .cupcakes, .sweets, .doughnuts, .item');
+                // console.log(typeof arr)
+                showAll(arr)
+                
+                if (name != "all") {
+                    arr.each(function () {
+                        console.log($(this).attr('class').toLowerCase())
+                        if (name != $(this).attr('class').toLowerCase()) {
+                            $(this).hide()
+                        }
+                    })
+                } else {
+                    showAll(arr)
+                }
+            })
+
+            $("#search-box").on("keyup", function () {
+                var name = $(this).val().toLowerCase();
+                console.log(name)
+                $(".cakes, .cupcakes, .sweets, .doughnuts, .item").filter(function () {
+                    $(this).toggle($(this).html().toLowerCase().indexOf(name) > -1)
+                });
+            });
+        })
+    </script>
+    <style>
+        body {
+            background-color: #ccc;
+        }
+
+        #wrapper {
+            width: 1024px;
+            margin: 0 auto;
+        }
+
+        nav.navigation {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        nav.navigation ul {
+            list-style: none;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        nav.navigation ul li {
+            display: inline-block;
+            background: linear-gradient(violet, red);
+
+        }
+
+        nav.navigation ul li a {
+            display: block;
+            float: left;
+            padding: 3px 6px;
+            color: #575c7d;
+            font-size: 22px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid black;
+        }
+
+        nav.navigation ul li a:hover {
+            background: #ccc;
+            color: #fff;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            padding: 3px 6px;
+            margin: 0;
+            text-decoration: none;
+            border: 1px solid black;
+
+        }
+
+        header div h1 {
+            text-align: center;
+            font: bold italic 5em "Fira Sans", serif;
+
+        }
+
+        #search div {
+            width: 100%;
+            align-content: center;
+        }
+
+        #search-box {
+            margin-left: 31%;
+            height: 32px;
+            width: 40%;
+            background-color: antiquewhite;
+            float: left;
+            border: 3px solid black;
+
+        }
+
+        #search-btn {
+            max-width: 70px;
+            min-height: 30px;
+            background-color: rgb(252, 55, 55);
+            border: 1px solid black;
+            float: left;
+            text-align: center;
+            vertical-align: middle;
+            
+
+        }
+        #search-btn a {
+            font: bold italic 1.4em "Fira Sans", serif;
+        }
+
+        #content {
+            margin-top: 100px;
+            float: left;
+            /* border: 0.5px solid black; */
+            /* min-height: 2000px; */
+        }
+
+        .cakes,
+        .cupcakes,
+        .sweets,
+        .doughnuts,
+        .item {
+            height: 300px;
+            width: 290px;
+            border: 1px solid black;
+            margin: 2%;
+            float: left;
+            background-color: white;
+        }
+
+        .item-img {
+            height: 270px;
+            width: 290px;
+        }
+
+        .item-name {
+            margin: 3px;
+            text-align: center;
+            font: bold italic 1.2em "Fira Sans", serif;
+            float: left;
+        }
+
+        .item-price {
+            margin: 3px;
+
+            text-align: center;
+            font: bold italic 1.2em "Fira Sans", serif;
+            float: right;
+        }
+
+        div footer {
+            /* bottom: 20px; */
+            float: left;
+            min-width: 100%;
+        }
+
+        div footer p {
+            text-align: center;
+        }
+        #content div:hover {
+            box-shadow: 3px 3px 3px white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div>
+            <header>
+                <div>
+
+                    <h1>Our Store</h1>
+                    <nav class="navigation">
+                        <ul>
+                            <li><a href="#">All</a></li>
+                            <li><a href="#">Cakes</a></li>
+                            <li><a href="#">Cupcakes</a></li>
+                            <li><a href="#">Sweets</a></li>
+                            <li><a href="#">Doughnuts</a></li>
+                        </ul>
+                    </nav>
+                    <nav id="search">
+                        <div>
+                            <input type="search" name="search-box" id="search-box">
+                            <div id="search-btn"><a >Search</a></div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+        </div>
+        <div id="content">
+            <div class="cakes">
+                <div><img src="./resources/cake.jfif" alt="cake" class="item-img"></div>
+                <div class="item-name">Cake</div>
+                <div class="item-price">5$</div>
+            </div>
+            <div class="cupcakes">
+                <div><img src="./resources/cupcake.jpg" alt="cupcake" class="item-img"></div>
+                <div class="item-name">Cupcake</div>
+                <div class="item-price">5$</div>
+            </div>
+            <div class="doughnuts">
+                <div><img src="./resources/doughnut.jpg" alt="doughnut" class="item-img"></div>
+                <div class="item-name">Doughnut</div>
+                <div class="item-price">5$</div>
+            </div>
+            <div class="sweets">
+                <div><img src="./resources/sweet.jpg" alt="sweet" class="item-img"></div>
+                <div class="item-name">Sweet</div>
+                <div class="item-price">5$</div>
+            </div>
+
+        </div>
+        <div>
+            <footer>
+                <p>Copyright. All right reserved.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

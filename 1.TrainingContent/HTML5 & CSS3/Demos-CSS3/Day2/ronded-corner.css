@@ -1,0 +1,13 @@
+#content{
+  background-color: grey;
+  width: 500px;
+  height: 300px;
+  /* apply to all */
+  border-radius: 15px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 60px;
+  border-top-right-radius: 90px;
+  /* shorthand property */
+  border-radius: 10px 30px 60px 90px;
+}

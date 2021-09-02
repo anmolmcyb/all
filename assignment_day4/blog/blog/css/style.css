@@ -1,0 +1,129 @@
+body {
+    background: linear-gradient(#ffd700, rgb(194, 162, 92));
+}
+
+#wrapper {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+#header h1 {
+    text-align: center;
+}
+
+nav.navigation {
+    display: block;
+    margin-bottom: 10px;
+}
+
+nav.navigation ul {
+    list-style: none;
+    font-size: 14px;
+    text-align: center;
+}
+
+nav.navigation ul li {
+    display: inline-block;
+    background: linear-gradient(violet, red);
+
+}
+
+nav.navigation ul li a {
+    display: block;
+    float: left;
+    padding: 3px 6px;
+    color: #575c7d;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav.navigation ul li a:hover {
+    background: #ccc;
+    color: #fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 3px 6px;
+    margin: 0;
+    text-decoration: none;
+}
+article section ul {
+    text-align: center;
+}
+
+article section ul li {
+    display: inline-block;
+    background: blue;
+    width: 95%;
+}
+article section ul li a {
+    display: block;
+    float: left;
+    padding: 3px 6px;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* page Content */
+
+#content {
+    display: block;
+    clear: both;
+    margin-bottom: 20px;
+    min-height: 500px;
+}
+
+#left-sidebar {
+    width: 20%;
+    min-width: 150px;
+    float: left;
+    margin: 0 15px;
+    background: #ccc;
+    min-height: 75%;
+    text-align: center;
+    position: fixed;
+}
+
+#right {
+    float: right;
+    width: 70%;
+    background: transparent;
+    text-align: center;
+    min-height: 500px;
+}
+
+footer {
+    text-align: center;
+}
+
+/* clearfix */
+
+.clearfix:after {
+    content: '.';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+article section section {
+    background: #efefef;
+    border: 3px solid black;
+}
+article section section:hover{
+    background:#e9ff87;
+}

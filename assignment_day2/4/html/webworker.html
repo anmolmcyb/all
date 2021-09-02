@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <title>
+            Assignment #4
+        </title>
+        <script src="../js/webworker.js"></script>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <div id="main">
+        <h1>Web worker actions</h1>
+        <p>
+            <b>Explaination: </b>This webworker will list down all characters from 30 to 20000 in utf-8.
+            Press Start to start the webworker. Press Stop to stop the webworker.
+        </p>
+        <button onclick="startWorker()" type="button">Start</button>
+        <button type="button" onclick="stopWorker()" >Stop</button>
+        <br/>
+        <div id="result"></div>
+        </div>
+    </body>
+</html>

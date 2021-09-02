@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+</head>
+
+<body>
+    <div>
+        <input type="number" name="in" id="in">
+        <input type="number" name="out" id="out">
+        <br>
+        <input type="button" value="Add number" onclick="read()">
+        <br>
+        <input type="button" id="add" value="add" onclick="add()">
+        <input type="button" id="sub" value="substract" onclick="sub()">
+        <input type="button" id="mul" value="multiply" onclick="mul()">
+        <input type="button" id="div" value="divide" onclick="div()">
+        <input type="button" id="mod" value="mod" onclick="mod()">
+        <br>
+        <input type="button" value="calculate" id="calc" onclick="calculate()">
+        <br>
+        <span id="ops"></span>
+        <br>
+        <span id="nums"></span>
+    </div>
+    <script>
+        let input = document.getElementById('in')
+        let output = document.getElementById('out')
+        let debugops = document.getElementById('ops')
+        let debugnums = document.getElementById('nums')
+        let debug = true
+        let nums = []
+        let operations = []
+        var op = false // when num is added, true. when op is added, false
+        // if false, pop op, and add operation, else add operation
+        let operate = new Map()
+        operate.set('+', (a, b) => a = a + b)
+        operate.set('-', (a, b) => a = a - b)
+        operate.set('*', (a, b) => a = a * b)
+        operate.set('/', (a, b) => a = a / b)
+        operate.set('%', (a, b) => a = a % b)
+        function read() {
+            if (op === true) {
+                nums.pop()
+                nums.push(+input.value)
+            } else {
+                nums.push(+input.value)
+            }
+            if (debug === true) {
+                debugnums.innerText =JSON.stringify( nums)
+            }
+            input.value = 0
+            op = true
+        }
+        function calculate() {
+            if (op === false)
+                operations.pop()
+            let sum = nums.shift()
+            while (nums.length > 0) {
+                let o = operate.get(operations.shift())
+                o(sum, nums.shift())
+            }
+            output.value = sum
+            console.log(sum)
+        }
+        function pushOp(opertor) {
+            if(nums.length === 0)return;
+            if (op === true)
+            operations.push(opertor)
+            else {
+                operations.pop()
+                operations.push(opertor)
+            }
+            if (debug === true) {
+                debugops.innerText = JSON.stringify(ops)
+            }
+            op = false
+        }
+        function add() {
+            pushOp('+')
+        }
+        function sub() {
+            pushOp('-')
+        }
+        function mul() {
+            pushOp('*')
+        }
+        function div() {
+            pushOp('/')
+        }
+        function mod() {
+            pushOp('%')
+        }
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p::first-letter {
+  color: #ff0000;
+  font-size: xx-large;
+}
+
+p::first-line {
+  color: #0000ff;
+  font-variant: small-caps;
+}
+::selection {
+  color: red;
+  background: yellow;
+}
+div::after {
+  content: "This data is from style";
+}
+</style>
+</head>
+<body>
+
+<p>You can combine the ::first-letter and ::first-line pseudo-elements to add a special effect to the first letter and the first line of a text!</p>
+<div>this is div element.</div>
+</body>
+</html>

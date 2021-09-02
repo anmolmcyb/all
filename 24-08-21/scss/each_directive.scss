@@ -1,0 +1,13 @@
+// list 
+@each $color in blue, black, yellow {
+    .#{$color}-background {
+        background-color: $color;
+    }
+}
+//colors map here
+$colors: (color1:blue, color2: black, color3: yellow);
+@each $key, $value in $colors {
+    .#{key}-background {
+        background-color: $value;
+    }
+}

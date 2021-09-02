@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media screen and (min-width: 1200px) {
+            body {
+                background-color: aliceblue;
+            }
+
+            .demo>div {
+                font: italic small-caps bold 16px/2 cursive;
+            }
+
+            .demo>p {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 400px) and (max-width: 599px){
+            /* the media query css gets carried down unless specified
+            like min-width and max-width */
+            body {
+                background-color: antiquewhite;
+            }
+
+            .demo > div {
+                display: none;
+            }
+
+            .demo>p {
+                font: italic small-caps bold 16px/2 cursive;
+            }
+        }
+
+        @media screen and (min-width: 600px) {
+            body {
+                background-color: aqua;
+            }
+
+            .demo > div {
+                font: small-caps bold 24px/1 sans-serif;
+            }
+
+            .demo>p {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+            body {
+                background-color: aquamarine;
+            }
+
+            .demo > div {
+                font: small-caps bold 24px/1 sans-serif;
+
+            }
+
+            .demo>p {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo">
+
+
+        <div>
+            change the bg
+            change the font sizes
+            for the small devices, hide this div
+            display some other paragraph instead
+        </div>
+        <p>
+            show this paragraph instead
+        </p>
+    </div>
+</body>
+
+</html>

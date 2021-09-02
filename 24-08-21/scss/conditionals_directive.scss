@@ -1,0 +1,43 @@
+@mixin condition($c) {
+    @if $c == danger {
+        color: red;
+        border: 1px solid rgb(131, 2, 2);
+    }
+    @else if $c == success {
+        color: green;
+        border: 1px solid rgb(0, 70, 0);
+    }
+    @else if $c == warning {
+        color: yellow;
+        border: 1px solid rgb(117, 117, 0);
+    }
+    @else if $c == important {
+        color: blue;
+        border: 1px solid rgb(3, 3, 129);
+    }
+    @else {
+        color: brown;
+        border: 1px solid rgb(209, 22, 22);
+    }
+}
+
+#danger {
+    @include condition(danger)
+}
+#success {
+    @include condition(success)
+}
+#important {
+    @include condition(important)
+}
+#warning {
+    @include condition(warning)
+}
+ul {
+    li{
+        background-color: blue;
+        &:hover {
+            background-color: red;
+        }
+    }
+}

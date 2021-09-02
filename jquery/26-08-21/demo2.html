@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('input[type="button"]').on('click', function () {
+                alert('clicked')
+            })
+            let op = $('#op')
+            op.text('hello')
+            console.log(op.val('hello'))
+            $('input').change(function () {
+                op.text($(this).val())
+            })
+            $('form').submit(function (e) {
+                e.preventDefault();
+                console.log(e.data)
+                console.log($(this).serialize())
+                // console.log($(this).formToJson())
+                // console.log($('form').formToJson())
+                console.log($(this).serializeArray())
+            })
+
+        })
+
+    </script>
+</head>
+
+<body>
+    <form>
+        <input type="button" value="click">
+        <br>
+        <br>
+        <br>
+        name: <input type="text" name="name" id="name">
+        <br>
+        <br>
+        <br>
+        emp id: <input type="text" name="empid" id="empid">
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="submit">
+    </form>
+    <span id="op">
+        hello
+    </span>
+</body>
+
+</html>

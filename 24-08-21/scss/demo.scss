@@ -1,0 +1,23 @@
+$body: #226666;
+$primary: #403075;
+$my-color: red;
+
+$footer: #aa8430;
+$font-stack: Helvetica, sans-serif;
+
+body{
+    background: $body;
+    font: $font-stack;
+}
+header{
+    color: $primary;
+}
+a {
+    color: $my-color;
+}
+p {
+    $my-color: green !global; /*changed the property $my-color*/
+    color: $my-color;
+}
+@debug 'hello';
+@debug $body;

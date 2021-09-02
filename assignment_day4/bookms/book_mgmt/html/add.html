@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="author" content="Anmol">
+    <meta name="description" content="registeration form">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration Form</title>
+    <style>
+        label {
+            float: left;
+        }
+
+        input {
+            float: right;
+            min-width: 256px;
+
+        }
+
+        #wrapper {
+            min-width: 512px;
+            max-width: 1024px;
+            margin: 0 auto;
+            border: 2px solid black;
+            background-color: azure;
+        }
+        
+        #header {
+            border: 10px;
+            text-align: left;
+
+            background-color: purple;
+
+            height: 50px;
+
+            vertical-align: middle;
+        }
+
+        #header>h1 {
+            padding: 10px;
+        }
+        nav.navigation {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        nav.navigation ul {
+            list-style: none;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        nav.navigation ul li {
+            background: linear-gradient(violet, red);
+            display: inline-block;
+        }
+
+        nav.navigation ul li a {
+            display: block;
+            float: left;
+            padding: 3px 6px;
+            color: #575c7d;
+            font-size: 22px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav.navigation ul li a:hover {
+            background: #ccc;
+            color: #fff;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            padding: 3px 6px;
+            margin: 0;
+            text-decoration: none;
+        }
+        form {
+            border: 1px solid pink;
+            margin: 10px;
+        }
+
+        form>div {
+            margin: 10px;
+        }
+
+        form input[type="submit"] {
+            min-width: 256px;
+            max-width: 512px;
+            margin: 0 auto;
+            border: 2px solid brown;
+            float: left;
+            box-shadow: 2px 2px 2px;
+        }
+
+        form textarea {
+            float: right;
+            /* width: 256px; */
+        }
+        .radio {
+            min-width: 256px;
+            float: right;
+        }
+        .radio input {
+            float: left;
+            min-width: 30px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrappper">
+        <header id="header">
+            <h1>
+                Book Management System
+            </h1>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="./page.html">Show all</a></li>
+                    <li><a href="./add.html">Add Book</a></li>
+                    <li><a href="./remove.html">Remove Book</a></li>
+                    <li><a href="./edit.html">Edit Book</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="wrapper">
+        <h1 style="text-align: center;">Enter the name of the book, and description to add</h1>
+        <form>
+            
+            <div>
+                <label for="name">Name</label>
+                <input required type="text" name="name" id="name" placeholder=" abc " minlength="3" maxlength="15"
+                    >
+            </div>
+            <br>
+            <div>
+                <label for="desc">Description</label>
+                <textarea name="desc" id="desc" cols="30" rows="10"></textarea>
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            
+            <br />
+            <br />
+
+            <div>
+                <input type="submit" value="submit" style="margin: 15px;">
+            </div>
+            <br />
+            <br />
+            <br />
+        </form>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+@use 'style1.scss' as st;
+
+button {
+    @include st.round(25);
+    color: white;
+}

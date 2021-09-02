@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style>
+        #test {
+            width: 100px;
+            height: 100px;
+            margin: 0px auto;
+        }
+    </style>
+    <script>
+        function drawShape() {
+            var canvas = document.getElementById('mycanvas');
+            var ctx = canvas.getContext('2d');
+           // ctx.beginPath();            
+            ctx.moveTo(25, 25);
+            ctx.lineTo(105, 100);
+            ctx.lineTo(25, 105);
+            //ctx.stroke();
+           
+           ctx.fill();                    
+        }
+    </script>
+</head>
+<body id="test" onload="drawShape();">
+    <canvas id="mycanvas"></canvas>
+</body>
+</html>

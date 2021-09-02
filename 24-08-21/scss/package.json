@@ -1,0 +1,14 @@
+{
+  "name": "scss",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "node-sass": "4.5.0"
+  },
+  "scripts": {
+    "node-sass": "node-sass --output-style compressed -o dist/css ./"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

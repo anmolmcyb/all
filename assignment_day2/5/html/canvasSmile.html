@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Assignment #5
+    </title>
+    
+</head>
+
+<body>
+    <canvas id="smile" width="1000" height="1000">
+        not supported error
+    </canvas>
+    <script>
+        var ex = document.getElementById('smile')
+        var ctx = ex.getContext('2d')
+        ctx.beginPath()
+        ctx.arc(75, 75, 50, 0, Math.PI * 2, true) // outer circle
+        ctx.fillStyle = "rgb(231,242,15)" //yellow
+        ctx.lineWidth = 3;
+        ctx.fill()
+        ctx.moveTo(100, 90)
+        // ctx.beginPath()
+
+        ctx.arc(75, 90, 25, 0, Math.PI, false) //smile
+        ctx.stroke()
+
+        ctx.moveTo(55, 65);
+        ctx.beginPath()
+        ctx.lineWidth = 5;
+
+        ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // Left eye
+        ctx.fillStyle = "rgb(0,0,0)" // white
+        ctx.fill()
+
+        ctx.moveTo(95, 65);
+        // ctx.beginPath()
+        ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Right eye
+        ctx.fill()
+        ctx.stroke()
+    </script>
+</body>
+
+</html>

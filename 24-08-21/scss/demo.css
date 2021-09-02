@@ -1,0 +1,18 @@
+body {
+  background: #226666;
+  font: Helvetica, sans-serif;
+}
+
+header {
+  color: #403075;
+}
+
+a {
+  color: red;
+}
+
+p {
+  /*changed the property $my-color*/
+  color: green;
+}
+/*# sourceMappingURL=demo.css.map */

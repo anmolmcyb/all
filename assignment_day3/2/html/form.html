@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="author" content="Anmol">
+    <meta name="description" content="registeration form">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration Form</title>
+    <style>
+        label {
+            float: left;
+        }
+
+        input {
+            float: right;
+            min-width: 256px;
+
+        }
+
+        #wrapper {
+            min-width: 512px;
+            max-width: 1024px;
+            margin: 0 auto;
+            border: 2px solid black;
+            background-color: azure;
+        }
+
+        form {
+            border: 1px solid pink;
+            margin: 10px;
+        }
+
+        form>div {
+            margin: 10px;
+        }
+
+        form input[type="submit"] {
+            min-width: 256px;
+            max-width: 512px;
+            margin: 0 auto;
+            border: 2px solid brown;
+            float: left;
+            box-shadow: 2px 2px 2px;
+            background: white;
+        }
+
+        form textarea {
+            float: right;
+            /* width: 256px; */
+        }
+
+        .radio {
+            min-width: 256px;
+            float: right;
+        }
+
+        .radio input {
+            float: left;
+            min-width: 30px;
+
+        }
+        input:invalid {
+            border: 3px solid red;
+        }
+        textarea:invalid{
+            border: 3px solid red;
+
+        }
+        form input[type="submit"]:hover {
+            background: blue;
+            border: 2px solid black;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <form>
+            <div>
+                <label for="empid">Employee ID</label>
+                <input required autofocus type="number" name="empid" id="empid" min="10001" max="15000">
+            </div>
+            <br />
+            <div>
+                <label for="fname">First Name</label>
+                <input required type="text" name="fname" id="fname" placeholder="John" pattern="[A-Za-z]{3,15}">
+            </div>
+            <br />
+            <div>
+                <label for="lname">Last Name</label>
+                <input required type="text" name="lname" id="lname" placeholder="Doe" pattern="[A-Za-z]{3,25}">
+            </div>
+            <br />
+            <div>
+                <label for="dept">Department</label>
+                <!-- <input required type="text" name="dept" id="dept" placeholder="Engineering"> -->
+                <div class="radio">
+
+                    <label><input required type="radio" name="dept" value="Engineering">Engineering</label>
+                    <br>
+                    <label><input required type="radio" name="dept" value="Management">Management</label>
+                    <br>
+
+                    <label><input required type="radio" name="dept" value="Data Science">Data
+                        Science</label>
+                    <br>
+
+                    <label><input required type="radio" name="dept" value="AI">AI </label>
+                    <br>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br />
+            <div>
+                <label for="doj">Date of Joining</label>
+                <input required type="date" name="doj" id="doj">
+            </div>
+            <br />
+            <div>
+                <label for="email">Email</label>
+                <input required type="email" name="email" id="email" placeholder="john@doe.com">
+            </div>
+            <br />
+            <div>
+                <label for="contact">Contact Number</label>
+                <input required type="tel" name="contact" id="contact" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    placeholder="882-886-4575">
+            </div>
+            <br />
+            <div>
+                <label for="addr">Address</label>
+                <textarea name="addr" id="addr" cols="30" rows="10" required minlength="3"></textarea>
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+
+            
+            <div>
+                <label for="tpa">Training Programs Attended</label>
+                <input type="number" name="tpa" id="tpa" min="0" max="10" required>
+            </div>
+            <br />
+            <br />
+
+            <div>
+                <input type="submit" value="submit" style="margin: 15px;">
+            </div>
+            <br />
+            <br />
+            <br />
+        </form>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script src="./student.js"></script>
+    </head>
+    <body>
+        <div id="demo">
+            <p>first child</p>
+            <p>
+                This is a paragraph...
+            </p>
+            <p>third</p>
+            <p>last child</p>
+        </div>
+        <script>
+            let x = document.getElementById('demo')
+            // console.log(x.innerHTML)
+            // console.log(x.innerText)
+            // console.log(x.textContent)
+            console.log(x.firstElementChild.nodeName)
+            console.log(x.firstElementChild.innerText)
+            console.log(x.lastElementChild.innerText)
+        </script>
+    </body>
+</html>
