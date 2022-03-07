@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    enter character : <input type="text" id="char">
+    <br>
+    Output: <span id="op"></span>
+    <script>
+        var companyName = 'Cybage Software Pvt Ltd'
+        let chr = document.getElementById('char')
+        let op = document.getElementById('op')
+        let search = ''
+        chr.addEventListener('keyup', function(){
+            search = chr.value
+            chr.value = ''
+            let index = companyName.indexOf(search)
+            if(index > -1)
+            op.innerText = `char ${search} is found at position ${index}`
+            else  
+                op.innerText = 'char not found'
+        })
+    </script>
+    <br>
+    <script>
+        document.writeln(`${companyName} is popularly known as ${companyName.split(' Pvt')[0]}`)
+        document.writeln('<br>')
+        document.writeln(companyName.toLowerCase())
+        document.writeln('<br>')
+        document.writeln(companyName.toUpperCase())
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    principal : <input type="number" name="p" id="p">
+    <br>
+    number of yrs: <input type="number" name="n" id="n">
+    <br>
+    rate : <input type="number" name="r" id="r">
+    <br>
+    <input type="button" value="submit" id="submit">
+    <br>
+    compound interest: <span id="op"></span>
+    <script>
+        
+        let p =document.getElementById('p')
+        let n = document.getElementById('n')
+        let r = document.getElementById('r')
+        let op = document.getElementById('op')
+        let submit =  document.getElementById('submit')
+        submit.addEventListener('click', function(){
+            op.innerText = (+p.value * Math.pow((1 + +r.value / 100), +n.value) - +p.value)
+            
+        })
+
+
+    </script>
+    
+</body>
+</html>

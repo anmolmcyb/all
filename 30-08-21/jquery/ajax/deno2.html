@@ -21,6 +21,19 @@ $(document).ready(function(){
         })
     })
 })
+$(document).ready(function(){
+    $('#post').click(function(){
+        console.log('executing get')
+        $.ajax({
+            type:"post",
+            url:"https://reqres.in/api/unknown",
+            success(result){
+                console.log(result)
+            },
+            dataType:'json'
+        })
+    })
+})
     </script>
 </head>
 <body>

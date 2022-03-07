@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.writeln(new Date())
+        document.writeln('<br>')
+        function greet(hrs) {
+            if(hrs < 12)
+                return 'good morning'
+            if (hrs <= 17) 
+                return 'good afternoon'
+            return 'good evening'
+        }
+        document.writeln(greet(new Date().getHours()))
+    </script>
+</body>
+</html>

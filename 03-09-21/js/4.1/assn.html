@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <input type="text" name="name" id="name">
+    <input type="button" value="add" id="add">
+    <input type="button" value="display" id="display">
+    <h2>List of students</h2>
+    <hr>
+    <div id="op"></div>
+
+    <script >
+        let name = document.getElementById('name')
+        let add = document.getElementById('add')
+        let display = document.getElementById('display')
+        let op = document.getElementById('op')
+        let names = []
+        add.addEventListener('click', function(){
+            if(name.value == '')
+                return
+            names.push(name.value)
+            name.value = ''
+        })
+        display.addEventListener('click', function(){
+            op.innerHTML = ''
+            let count = names.length < 4 ? names.length:4;
+            
+
+            for(let i = 0; i < count; i++){
+                let txtnode = document.createTextNode(names[i])
+                let p = document.createElement('p')
+                p.appendChild(txtnode)
+                op.appendChild(p)
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location and History Object</title>
+    <style>
+        
+        table,
+        td {
+            border: 1px solid black;
+        }
+
+        h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Location Object Properties</h3>
+    <br />
+    <table>
+        <tr>
+            <td>HREF</td>
+            <td id="location"></td>
+        </tr>
+        <tr>
+            <td>Path Name</td>
+            <td id="pathName"></td>
+        </tr>
+        <tr>
+            <td>Protocol</td>
+            <td id="protocol"></td>
+        </tr>
+    </table>
+    <br />
+    <div>
+        <p>Click <a href="reg.html">Here</a> to register</p>
+    </div>
+    <script>
+        var loc = location.href;
+        document.getElementById("location").innerHTML = loc;
+        var path = location.pathname;
+        document.getElementById("pathName").innerHTML = path;
+        var proto = location.protocol;
+        document.getElementById("protocol").innerHTML = proto;
+    </script>
+</body>
+
+</html>
